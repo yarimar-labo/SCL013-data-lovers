@@ -2,20 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1">
   <title>Pokedata</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/24e71e8c99.js" crossorigin="anonymous"></script>
-  
 </head>
 
 <body>
   <header>
     <div class="header">
-      <img src="./imagenes/logotipo.png" alt="logotipo">
+      <img src="./imagenes/logotipo.png" class="logo" alt="logotipo">
     </div>
+
     <nav class="navegationBar">
       <a href="#" class="navegationMenu">Inicio</a>
-
       <select class="navegationMenu">
         <option value="">Ordenar</option>
         <option value="">A - Z</option>
@@ -68,13 +69,18 @@
       <a href="#">Mas informacion</a></li>
     </nav>
     </header>
-  
+
+  <main class="containerMain">
     <div class="box">
     <div class="container-1">
       <span class="icon"><i class="fas fa-search"></i></span>
       <input type="search" id="search" placeholder="Buscar Pokemon" />
     </div>
   </div>
+  <div class="containerCard" id="containerCard">
+    
+  </div>
+  </main>
   <script src="main.js" type="module"></script>
 </body>
 </html>
