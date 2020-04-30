@@ -18,12 +18,20 @@ body {
     left: 0px;
     top: 0px;
     background-color: #DC0A2D;
+    display: flex;
+    align-items: center;
 }
+.logo {
+   margin-right: auto;
+   margin-left: auto;
+}
+
+
 
 .navegationBar {
     position: absolute;
     width: 100%;
-    height: 72px;
+    height: 5%;
     left: 0px;
     top: 25%;
     background-color: #424242;
@@ -36,8 +44,16 @@ body {
     border: none;
 }
 
+.containerMain{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0px;
+    top: 30%;
+}
+
 .box {
-    margin: 100px auto;
+    margin: 2% auto;
     width: 300px;
     height: 50px;
 }
@@ -88,6 +104,32 @@ body {
     z-index: 1;
     color:white;
   }
-  
- 
+  .containerCard {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+  }
 
+ .pokemonCard {
+    flex-direction: column;
+    background-color: white;
+    margin: 1%;
+    padding: 3%;
+    border-radius: 5%;
+ }
+ 
+ .pokemonImg { 
+    width: 120px;
+}
+
+.pokemonName {
+    margin-top: 10%;
+    width: 120px;
+}
+.pokemonNum {
+    width: 120px;
+    margin-bottom: 20%;
+}
