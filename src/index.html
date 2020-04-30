@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -12,75 +13,52 @@ maximum-scale=1">
 <body>
   <header>
     <div class="header">
-      <img src="./imagenes/logotipo.png" class="logo" alt="logotipo">
+      <img class="logo" src="./imagenes/logotipo.png" alt="logotipo">
     </div>
+    <nav class="flex-menu navegationBar">
 
-    <nav class="navegationBar">
-      <a href="#" class="navegationMenu">Inicio</a>
-      <select class="navegationMenu">
-        <option value="">Ordenar</option>
-        <option value="">A - Z</option>
-        <option value="">Z - A</option>
-        <option value="">Ascendente</option>
-        <option value="">Descendente</option>
-      </select>
-      <select class="navegationMenu">
-        <option value="">Tipo de Pokemon</option>
-        <option value="">Agua</option>
-        <option value="">Fuego</option>
-        <option value="">Tierra</option>
-        <option value="">Roca</option>
-        <option value="">Planta</option>
-        <option value="">Veneno</option>
-        <option value="">Psiquico</option>
-        <option value="">Hielo</option>
-        <option value="">Electico</option>
-        <option value="">Lucha</option>
-        <option value="">Volador</option>
-        <option value="">Acero</option>
-        <option value="">Bicho</option>
-        <option value="">Dragon</option>
-        <option value="">Fantasma</option>
-        <option value="">Hada</option>
-        <option value="">Siniestro</option>
-        <option value="">Normal</option>
-      </select>
-      <select class="navegationMenu">
-        <option value="">Debilidades</option>
-        <option value="">Agua</option>
-        <option value="">Fuego</option>
-        <option value="">Tierra</option>
-        <option value="">Roca</option>
-        <option value="">Planta</option>
-        <option value="">Veneno</option>
-        <option value="">Psiquico</option>
-        <option value="">Hielo</option>
-        <option value="">Electico</option>
-        <option value="">Lucha</option>
-        <option value="">Volador</option>
-        <option value="">Acero</option>
-        <option value="">Bicho</option>
-        <option value="">Dragon</option>
-        <option value="">Fantasma</option>
-        <option value="">hada</option>
-        <option value="">Siniestro</option>
-        <option value="">Normal</option>
-      </select>
-      <a href="#">Mas informacion</a></li>
+      <div class=flex-element>
+        <a href="#" class="navegationMenu"><span class="icon"><i class="fas fa-home"></i></span></a>
+      </div>
+
+      <div class=flex-element>
+        <select class="navegationMenu">
+          <option value="">Ordenar</option>
+          <option value="">A - Z</option>
+          <option value="">Z - A</option>
+          <option value="">Ascendente</option>
+          <option value="">Descendente</option>
+        </select>
+      </div>
+
+      <div class=flex-element>
+        <select class="navegationMenu" id="Tipos">
+          <option value="">Tipo de Pokemon</option>
+        </select>
+      </div>
+
+      <div class=flex-element>
+        <select class="navegationMenu" id="Debilidad">
+          <option value="">Debilidades</option>
+        </select>
+      </div>
+
+      <div class=flex-element>
+        <a href="#" class="navegationMenu">Mas informacion</a>
+      </div>
     </nav>
-    </header>
-
-  <main class="containerMain">
-    <div class="box">
-    <div class="container-1">
-      <span class="icon"><i class="fas fa-search"></i></span>
-      <input type="search" id="search" placeholder="Buscar Pokemon" />
+  </header>
+  <main id="root">
+    <div id="search-box">
+      <div>
+        <span class="icon"><i class="fas fa-search"></i></span>
+        <input type="search" id="search" placeholder="Buscar Pokemon" />
+      </div>
     </div>
-  </div>
-  <div class="containerCard" id="containerCard">
-    
-  </div>
+    <div id="filters"></div>
+    <div id="contents"></div>
   </main>
+<footer>Copyright 2020 Nadia y Yarimar</footer>
   <script src="main.js" type="module"></script>
 </body>
 </html>
