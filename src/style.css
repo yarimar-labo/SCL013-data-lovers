@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -12,82 +11,145 @@ body {
 }
 
 .header {
-    position: absolute;
     width: 100%;
-    height: 25%;
-    left: 0px;
-    top: 0px;
     background-color: #DC0A2D;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .navegationBar {
-    position: absolute;
-    width: 100%;
-    height: 72px;
-    left: 0px;
-    top: 25%;
     background-color: #424242;
+    padding: 3px;
+}
+
+.flex-menu {
+    border: 1px solid #555;
+    font: 14px Arial;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-element {
+    width: auto;
+    -webkit-transition: width 0.7s ease-out;
+    transition: width 0.7s ease-out;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    margin-top: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon {
+    color: white;
+    font-size: 20px;
 }
 
 .navegationMenu {
-    position: relative;
-    display: inline-block;
-    background-color: transparent;
+    background-color: #424242;
     border: none;
+    color: white;
 }
 
-.box {
-    margin: 100px auto;
+a.navegationMenu {
+    margin-top: 4px;
+}
+select:focus {
+    outline: none;
+}
+
+.containerMain {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0px;
+    top: 30%;
+}
+
+#search-box {
+    margin: 2% auto;
     width: 300px;
     height: 50px;
 }
 
-.container-1 {
+#search-box > div {
     width: 300px;
     vertical-align: middle;
     white-space: nowrap;
     position: relative;
 }
 
-.container-1 input#search {
+#search-box > div input#search {
     width: 300px;
     height: 50px;
-    background: green;
+    background: white;
     border: #818181;
     border-radius: 50px;
     font-size: 10pt;
     float: left;
-    color: white;
+    color: #585151;
     padding-left: 45px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-  }
+}
 
-  .container-1 input#search::-webkit-input-placeholder {
-    color: white;
- }
-  
- .container-1 input#search:-moz-placeholder { /* Firefox 18- */
-    color: white;  
- }
-  
- .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
-    color: white;  
- }
-  
- .container-1 input#search:-ms-input-placeholder {  
-    color: white;  
- }
+#search-box > div input#search:focus {
+    outline: none;
+}
 
-  .container-1 .icon{
+#search-box > div input#search::-webkit-input-placeholder {
+    color: #818181;
+}
+
+#search-box > div input#search:-moz-placeholder {
+    /* Firefox 18- */
+    color: #818181;
+}
+
+#search-box > div input#search::-moz-placeholder {
+    /* Firefox 19+ */
+    color:#818181;
+}
+
+#search-box > div input#search:-ms-input-placeholder {
+    color: #818181;
+}
+
+#search-box > div .icon {
     position: absolute;
     top: 50%;
     margin-left: 17px;
     margin-top: 17px;
     z-index: 1;
-    color:white;
-  }
-  
- 
+    color: #818181;
+}
 
+#contents {
+    margin-bottom: 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #424242;
+    color: white;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    text-align: center;
+
+}
