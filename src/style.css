@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #C4C4C4;
+    background-color: white;
 }
 
 .header {
@@ -68,7 +68,7 @@ body {
 .container-1 input#search {
     width: 300px;
     height: 50px;
-    background: green;
+    background: white;
     border: #818181;
     border-radius: 50px;
     font-size: 10pt;
@@ -78,6 +78,7 @@ body {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .container-1 input#search::-webkit-input-placeholder {
@@ -119,6 +120,12 @@ body {
     margin: 1%;
     padding: 3%;
     border-radius: 5%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease-out;
+ }
+ .pokemonCard:hover {
+     box-shadow: 0 4px 8px 0 rgba(50, 96, 246, 0.2), 0 6px 20px 0 rgba(50, 96, 246, 0.2);
  }
  
  .pokemonImg { 
