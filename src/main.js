@@ -4,8 +4,6 @@ import data from './data/pokemon/pokemon.js';
 
 const datapokemon = data.pokemon;
 
-
-
 datapokemon.forEach(function (pokemon) {
     //names.push(pokemon.name);
     let pokemonCard = createCard(pokemon);
