@@ -1,16 +1,41 @@
-import { example } from './data.js';
-
+import { sortedData } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-const datapokemon = data.pokemon;
 
-datapokemon.forEach(function (pokemon) {
-    //names.push(pokemon.name);
-    let pokemonCard = createCard(pokemon);
-    showPokemonCard(pokemonCard)
+const selectOrder = document.getElementById("selectOrder");
+// Evento por el cual imprimimos las pokemonCard ordenadas alfabetica y numericamente.
+selectOrder.addEventListener("change", () => {
+  // Accedemos a la opcion del select a traves de selectedIndex, el cual nos devuelve su value.
+  let condition = selectOrder.options[selectOrder.selectedIndex].value;
+  // Limpiar CardContainer
+  clearCardContainer();
+  // Obtener array procesado
+  let result = sortedData(condition);
+  // Imprimir array en pantalla como tarjetas
+  printPokemonCard(result)
 })
 
-function createCard(pokemon) {
+/*
+// HELPERS: (funciones que te ayudan a hacer cosas)
+*/
+
+// Recibe un array de pokemon y los agrega al div containerCard como pokemonCard
+const printPokemonCard = (datapokemon) => {
+  datapokemon.forEach(function (pokemon) {
+    let pokemonCard = createPokemonCard(pokemon);
+    showPokemonCard(pokemonCard)
+  })
+}
+// Borra todo el contenido dentro del <div containerCard>
+const clearCardContainer = () => {
+  let visiblePokemonCards = document.getElementById("containerCard").querySelectorAll(".pokemonCard");
+
+  visiblePokemonCards.forEach(function (pokemonCard) {
+    pokemonCard.remove();
+  })
+}
+// Crea los <div pokemonCard> en cardContainer
+const createPokemonCard = (pokemon) => {
     let pokemonCard = document.createElement("div");
         pokemonCard.className += "pokemonCard";
     let pokemonNum = document.createElement("p");
@@ -21,18 +46,19 @@ function createCard(pokemon) {
         pokemonImg.className += "pokemonImg"
     let pokemonName = document.createElement("p");
         pokemonName.innerHTML = pokemon.name;
-        pokemonName.className += "pokemonName"    
-    
+        pokemonName.className += "pokemonName"
+
     pokemonCard.appendChild(pokemonNum);
     pokemonCard.appendChild(pokemonImg);
     pokemonCard.appendChild(pokemonName);
 
     return pokemonCard;
- }
-
-function showPokemonCard(pokemonCard) {
+}
+// Imprime los <div pokemonCard> en cardContainer
+const showPokemonCard = (pokemonCard) => {
     let containerCard = document.getElementById("containerCard");
     containerCard.appendChild(pokemonCard);
 }
 
-// console.log(example, data);
+// Imprimo todos los pokemon al inicializar la pagina.
+printPokemonCard(data.pokemon)
