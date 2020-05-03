@@ -7,21 +7,30 @@
 }
 
 body {
-    background-color: #C4C4C4;
+    background-color: white;
 }
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 240px;
+    z-index: 10000;
+    background-color: #c4c4c4;
+    box-shadow: -2px 3px 9px #424242}
 
 .header {
     width: 100%;
     background-color: #DC0A2D;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 .logo {
    margin-right: auto;
    margin-left: auto;
 }
-
-
 
 .navegationBar {
     background-color: #424242;
@@ -52,8 +61,8 @@ a {
     color: white;
 }
 
-.icon {
-    color: white;
+.icon #search-box > div input#search{
+    color: #585151;
     font-size: 20px;
 }
 
@@ -73,15 +82,17 @@ select:focus {
 .containerMain {
     position: absolute;
     width: 100%;
-    height: 70%;
     left: 0px;
-    top: 30%;
+    background-color: white;
+    margin-top: 240px;
 }
 
 #search-box {
-    margin: 2% auto;
-    width: 300px;
-    height: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    margin-top: 17px;
 }
 
 #search-box > div {
@@ -97,14 +108,14 @@ select:focus {
     background: white;
     border: #818181;
     border-radius: 50px;
-    font-size: 10pt;
-    float: left;
+    font-size: 10px;
     color: #585151;
     padding-left: 45px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-}
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
 #search-box > div input#search:focus {
     outline: none;
@@ -129,11 +140,46 @@ select:focus {
 }
 
 #search-box > div .icon {
-    position: absolute;
-    top: 50%;
-    margin-left: 17px;
-    margin-top: 17px;
+    position: relative;
     z-index: 1;
+    color:#818181;
+    left: 40px;
+  }
+  .containerCard {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+  }
+
+ .pokemonCard {
+    flex-direction: column;
+    background-color: white;
+    margin: 1%;
+    padding: 3%;
+    border-radius: 5%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease-out;
+    width: 150px;
+ }
+ .pokemonCard:hover {
+     box-shadow: 0 4px 8px 0 rgba(50, 96, 246, 0.2), 0 6px 20px 0 rgba(50, 96, 246, 0.2);
+ }
+ 
+ .pokemonImg { 
+    width: 100%;
+}
+
+.pokemonName {
+    margin-top: 10%;
+    width: 120px;
+}
+.pokemonNum {
+    width: 120px;
+    margin-bottom: 20%;
     color: #818181;
 }
 
@@ -142,7 +188,7 @@ select:focus {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -151,6 +197,6 @@ footer {
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
-    text-align: center;
-    
+    text-align: center;    
 }
+
