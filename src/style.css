@@ -168,8 +168,8 @@ select:focus {
  .pokemonCard:hover {
      box-shadow: 0 4px 8px 0 rgba(246, 50, 109, 0.2), 0 6px 20px 0 rgba(246, 50, 73, 0.2);
  }
- 
- .pokemonImg { 
+
+ .pokemonImg {
     width: 100%;
 }
 
@@ -197,6 +197,6 @@ footer {
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
-    text-align: center;    
+    text-align: center;
 }
 
