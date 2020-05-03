@@ -22,12 +22,12 @@ maximum-scale=1">
       </div>
 
       <div class=flex-element>
-        <select class="navegationMenu">
-          <option value="">Ordenar</option>
-          <option value="">A - Z</option>
-          <option value="">Z - A</option>
-          <option value="">Ascendente</option>
-          <option value="">Descendente</option>
+        <select class="navegationMenu" id="selectOrder">
+          <option value="ordenar">Ordenar</option>
+          <option value="a-z" id="a-z">A - Z</option>
+          <option value="z-a" id="z-a">Z - A</option>
+          <option value="ascendente" id="ascendente">Ascendente</option>
+          <option value="descendente" id="descendente">Descendente</option>
         </select>
       </div>
 
@@ -48,7 +48,7 @@ maximum-scale=1">
       </div>
     </nav>
   </header>
-  
+
   <main class="containerMain" id="root">
     <div id="search-box">
       <div>
@@ -56,7 +56,9 @@ maximum-scale=1">
         <input type="search" id="search" placeholder="Buscar Pokemon" />
       </div>
     </div>
-    <div class="containerCard" id="containerCard"></div>
+    <div class="containerCard" id="containerCard">
+      <!-- se insertan pokemonCard a traves de main.js -->
+    </div>
     <div id="filters"></div>
     <div id="contents"></div>
   </main>
