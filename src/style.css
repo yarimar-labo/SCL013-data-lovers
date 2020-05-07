@@ -5,50 +5,41 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 body {
   background-color: white;
-  font-family: 'Roboto', sans-serif;
 }
-
 header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 25%;
+  height: 240px;
   z-index: 10000;
   background-color: #c4c4c4;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
+  box-shadow: -2px 3px 9px #424242}
 .header {
   width: 100%;
   background-color: #DC0A2D;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   padding: 10px;
 }
 .logo {
  margin-right: auto;
  margin-left: auto;
 }
-
 .navegationBar {
   background-color: #424242;
-  padding: 6px;
-  font-size: 13px;
+  padding: 3px;
 }
-
 .flex-menu {
   border: 1px solid #555;
+  font: 14px Arial;
   display: -webkit-flex;
   -webkit-flex-direction: row;
   display: flex;
   flex-direction: row;
-
 }
-
 .flex-element {
   width: auto;
   -webkit-transition: width 0.7s ease-out;
@@ -58,30 +49,28 @@ header {
   text-align: center;
   margin-top: 4px;
 }
-
 a {
   text-decoration: none;
   color: white;
 }
-
 .icon #search-box > div input#search{
   color: #585151;
   font-size: 20px;
 }
-
 .navegationMenu {
   background-color: #424242;
   border: none;
   color: white;
 }
-
+label {
+color: white;
+}
 a.navegationMenu {
   margin-top: 4px;
 }
 select:focus {
   outline: none;
 }
-
 .containerMain {
   position: absolute;
   width: 100%;
@@ -89,30 +78,26 @@ select:focus {
   background-color: white;
   margin-top: 240px;
 }
-
 #search-box {
   position: relative;
-  /* margin: auto; */
-  position: center;
+  margin-left: auto;
+  margin-right: auto;
   width: 320px;
   margin-top: 17px;
-  margin-left: 36%;
 }
-
 #search-box > div {
-  width: 500px;
+  width: 300px;
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
 }
-
 #search-box > div input#search {
-  width: 500px;
+  width: 300px;
   height: 50px;
   background: white;
   border: #818181;
   border-radius: 50px;
-  font-size: 12px;
+  font-size: 10px;
   color: #585151;
   padding-left: 45px;
   -webkit-border-radius: 50px;
@@ -120,29 +105,23 @@ select:focus {
   border-radius: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 #search-box > div input#search:focus {
   outline: none;
 }
-
 #search-box > div input#search::-webkit-input-placeholder {
   color: #818181;
 }
-
 #search-box > div input#search:-moz-placeholder {
   /* Firefox 18- */
   color: #818181;
 }
-
 #search-box > div input#search::-moz-placeholder {
   /* Firefox 19+ */
   color:#818181;
 }
-
 #search-box > div input#search:-ms-input-placeholder {
   color: #818181;
 }
-
 #search-box > div .icon {
   position: relative;
   z-index: 1;
@@ -156,10 +135,10 @@ select:focus {
   margin-left: 10%;
   margin-right: 10%;
   justify-content: center;
-  margin-top: 2%;
-  margin-bottom: 3%;
 }
-
+.containerCard a{
+    color: black;
+}
 .pokemonCard {
   flex-direction: column;
   background-color: white;
@@ -169,34 +148,26 @@ select:focus {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all 0.5s ease-out;
-  width: 200px;
-  align-content: center;
+  width: 150px;
 }
 .pokemonCard:hover {
-   box-shadow: 0 4px 8px 0 rgba(246, 50, 109, 0.2), 0 6px 20px 0 rgba(246, 50, 73, 0.2);
+   box-shadow: 0 4px 8px 0 rgba(50, 96, 246, 0.2), 0 6px 20px 0 rgba(50, 96, 246, 0.2);
 }
-
 .pokemonImg {
   width: 100%;
 }
-
 .pokemonName {
   margin-top: 10%;
-  /* width: 120px; */
-  font-size: 17px;
-
+  width: 120px;
 }
 .pokemonNum {
   width: 120px;
   margin-bottom: 20%;
   color: #818181;
-  font-size: 15px;
 }
-
 #contents {
   margin-bottom: 30px;
 }
-
 footer {
   position: fixed;
   bottom: 0;
@@ -204,9 +175,8 @@ footer {
   right: 0;
   background-color: #424242;
   color: white;
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
-  padding: 0.5%;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
   text-align: center;
 }
-
