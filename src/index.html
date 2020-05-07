@@ -23,29 +23,67 @@ maximum-scale=1">
       </div>
 
       <div class="flex-element">
-        <select class="navegationMenu" id="selectOrder">
-          <option value="ordenar">Ordenar</option>
-          <option value="a-z" id="a-z">A - Z</option>
-          <option value="z-a" id="z-a">Z - A</option>
-          <option value="ascendente" id="ascendente">Ascendente</option>
-          <option value="descendente" id="descendente">Descendente</option>
+        <label for="order">Orden: </label>
+        <select class="navegationMenu" id="order">
+          <option value="0-9"># Ascendente</option>
+          <option value="9-0"># Descendente</option>
+          <option value="AZ">A - Z</option>
+          <option value="ZA">Z - A</option>
         </select>
       </div>
 
       <div class="flex-element">
-        <select class="navegationMenu" id="Tipos">
-          <option value="">Tipo de Pokemon</option>
+        <label for="types">Tipo: </label>
+        <select class="navegationMenu" id="types">
+          <option value="">Todos</option>
+          <option value="Water">Agua</option>
+          <option value="Fire">Fuego</option>
+          <option value="Ground">Tierra</option>
+          <option value="Rock"> Roca</option>
+          <option value="Grass">Planta</option>
+          <option value="Poison">Veneno</option>
+          <option value="Psychic">Psiquico</option>
+          <option value="Ice">Hielo</option>
+          <option value="Electric">Electrico</option>
+          <option value="Fighting">Lucha</option>
+          <option value="Flying">Volador</option>
+          <option value="Steel">Acero</option>
+          <option value="Bug">Bicho</option>
+          <option value="Dragon">Dragon</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Fairy">Hada</option>
+          <option value="Sinister">Siniestro</option>
+          <option value="Normal">Normal</option>
         </select>
       </div>
 
       <div class="flex-element">
-        <select class="navegationMenu" id="Debilidad">
-          <option value="">Debilidades</option>
+        <label for="weakness">Debilidades: </label>
+        <select class="navegationMenu" id="weakness">
+            <option value="">Todas</option>
+            <option value="Water">Agua</option>
+            <option value="Fire">Fuego</option>
+            <option value="Ground">Tierra</option>
+            <option value="Rock"> Roca</option>
+            <option value="Grass">Planta</option>
+            <option value="Poison">Veneno</option>
+            <option value="Psychic">Psiquico</option>
+            <option value="Ice">Hielo</option>
+            <option value="Electric">Electrico</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Flying">Volador</option>
+            <option value="Steel">Acero</option>
+            <option value="Bug">Bicho</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Fairy">hada</option>
+            <option value="Sinister">Siniestro</option>
+            <option value="Normal">Normal</option>
         </select>
       </div>
 
       <div class="flex-element">
-        <a href="#" class="navegationMenu">Mas informacion</a>
+        <a href="https://pokemon.fandom.com/es/wiki/Lista_de_Pok%C3%A9mon" class="navegationMenu">Mas informacion</a>
       </div>
     </nav>
 
@@ -55,7 +93,6 @@ maximum-scale=1">
         <input type="search" id="search" placeholder="Buscar Pokemon" />
       </div>
     </div>
-
   </header>
 
   <main class="containerMain" id="root">

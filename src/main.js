@@ -1,73 +1,94 @@
-import { sortedData } from './data.js';
-import data from './data/pokemon/pokemon.js';
+import {  getPokemons } from './data.js';
 
+//Se declara las constantes de los selects y el contenedor principal para manipular el dom.
+const selectorTypePokemon = document.getElementById("types");
+const selectorWeaknessPokemon = document.getElementById("weakness");
+const selectorOrderPokemon = document.getElementById("order");
+const  cardList = document.getElementById("containerCard");
 
-const selectOrder = document.getElementById("selectOrder");
-// Evento por el cual imprimimos las pokemonCard ordenadas alfabetica y numericamente.
-selectOrder.addEventListener("change", () => {
-  // Accedemos a la opcion del select a traves de selectedIndex, el cual nos devuelve su value.
-  let condition = selectOrder.options[selectOrder.selectedIndex].value;
-  // Limpiar CardContainer
-  clearCardContainer();
-  // Obtener array procesado
-  let result = sortedData(condition);
-  // Imprimir array en pantalla como tarjetas
-  printPokemonCard(result)
-})
+//Obtenemos los pokemones de acuerdo a los filtros.
+const displayPokemon = (order = "0-9", types = "", weakness = "") => {
+    let pokemons = getPokemons(order, types, weakness); //Ibocamos la funcion del modulo data getPkemon a cada uno de los elementos.
 
-/*
-// HELPERS: (funciones que te ayudan a hacer cosas)
-*/
+    //limpia el contenedor de pokemones
+    cardList.innerHTML = '';
 
-// Recibe un array de pokemon y los agrega al div containerCard como pokemonCard
-const printPokemonCard = (datapokemon) => {
-  datapokemon.forEach(function (pokemon) {
-    let pokemonCard = createPokemonCard(pokemon);
-    showPokemonCard(pokemonCard)
-  })
-}
-// Borra todo el contenido dentro del <div containerCard>
-const clearCardContainer = () => {
-  let visiblePokemonCards = document.getElementById("containerCard").querySelectorAll(".pokemonCard");
+    //Recorre todos los elemtos del array pokemons
+    pokemons.forEach((pokemon) => { //Obtengo un pokemon.
+        //Se crean todos los elementos de la carta.
+        let cardPokemon = document.createElement("div");
+        let cardLink = document.createElement("a");
+        let cardName = document.createElement("p");
+        let cardImagen = document.createElement("img");
+        let cardNumber = document.createElement("p");
 
-  visiblePokemonCards.forEach(function (pokemonCard){
-    pokemonCard.remove();
-  })
-}
-// Crea los <div pokemonCard> en cardContainer
-const createPokemonCard = (pokemon) => {
-    let pokemonCard = document.createElement("div");
-        pokemonCard.className += "pokemonCard";
-    let pokemonNum = document.createElement("p");
-        pokemonNum.innerHTML = "#" +pokemon.num;
-        pokemonNum.className += "pokemonNum"
-    let pokemonImg = document.createElement("img");
-        pokemonImg.src = pokemon.img;
-        pokemonImg.className += "pokemonImg"
-    let pokemonName = document.createElement("p");
-        pokemonName.innerHTML = pokemon.name;
-        pokemonName.className += "pokemonName"
+        cardLink.href='#'; //programar aqui el despliegue del detalle de la tarjeta.
 
-    pokemonCard.appendChild(pokemonNum);
-    pokemonCard.appendChild(pokemonImg);
-    pokemonCard.appendChild(pokemonName);
+        //Se asignan las clases para aplicar estilo a cada elemento.
+        cardPokemon.className = "pokemonCard";
+        cardImagen.className="pokemonImg";
+        cardName.className="pokemonName";
+        cardNumber.className="pokemonNum";
 
-    return pokemonCard;
-}
-// Imprime los <div pokemonCard> en cardContainer
-const showPokemonCard = (pokemonCard) => {
-    let containerCard = document.getElementById("containerCard");
-    containerCard.appendChild(pokemonCard);
+        //Se asigna los datos a cada uno de los elementos img, numero y nombre.
+        cardNumber.innerText = '#' + pokemon.num;
+        cardImagen.src = pokemon.img;
+        cardName.innerText = pokemon.name;
+
+        //Se argragan al elemento <a> los elementos img, numero y nombre.
+        cardLink.appendChild(cardNumber);
+        cardLink.appendChild(cardImagen);
+        cardLink.appendChild(cardName);
+
+        //Se agrega al elemento <div> el elemento <a> que contiente todos los demas elementos img, numero y nombre.
+        cardPokemon.appendChild(cardLink);
+
+        //Se agrega la carta al contenedor principal.
+        cardList.appendChild(cardPokemon);
+    })
+
+    return true;
+
 }
 
-// Imprimo todos los pokemon al inicializar la pagina.
-printPokemonCard(data.pokemon)
+//Se rellena el select de los tipos
+const displayTypes = () => {
+    //let displayTypes = getTypes(); //Se debe programar la funcion a futuro.
+    return true;
 
+}
 
-// SEARCH
-const search = document.getElementById("search");
+//Se rellena el select de las debilidades
+const displayWeakness = () => {
+    //let displayWeakness = getWeakness(); //Se debe programar la funcion a futuro.
+    return true;
 
-search.addEventListener()
-// TO DO
+}
 
-//
+//Se define que se va a ejecutar hasta que terminen de cargar los documentos.
+window.onload = () => {
+
+    //Se atrapa un evento change cada vez que se alija una opcion del select.
+    selectorTypePokemon.addEventListener("change",() => {
+        //despliega los pokemon segun los filtros (valor de select.value) de tipos y debilidad y ordenado por el orden selecionando.
+        displayPokemon(selectorOrderPokemon.value, selectorTypePokemon.value, selectorWeaknessPokemon.value);
+
+    });
+    selectorWeaknessPokemon.addEventListener("change",() => {
+        displayPokemon(selectorOrderPokemon.value, selectorTypePokemon.value, selectorWeaknessPokemon.value);
+
+    });
+
+    selectorOrderPokemon.addEventListener("change",() => {
+        displayPokemon(selectorOrderPokemon.value, selectorTypePokemon.value, selectorWeaknessPokemon.value);
+
+    });
+
+    //Se rellena los pokemones segun los filtros por defecto.
+    displayPokemon();
+    //Se rellenan los tipos.
+    displayTypes();
+    //Se rellenan las debilidades.
+    displayWeakness();
+
+}

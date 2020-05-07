@@ -1,39 +1,39 @@
-import { sortedData, arrayOrderedByName, arrayOrderedByNumber } from '../src/data.js';
+import { getPokemons} from '../src/data.js';
 
-// test sortedData
-describe('sortedData', () => {
-  test('is a function', () => {
-    expect(typeof sortedData).toBe('function');
+
+describe('getPokemons', () => {
+  test('es una funcion', () => {
+    expect(typeof getPokemons).toBe('function');
   });
 
-  test('test sortedData a-z', () => {
-    let result = sortedData('a-z')
-    expect(result[0].name).toBe('Abra');
-  });
-});
-
-// test arrayOrderedByName
-describe('arrayOrderedByName', () => {
-  test('is a function', () => {
-    expect(typeof arrayOrderedByName).toBe('function');
+  test('Deberia retornar los pokemones ordenados del 0 al 9', () => {
+    expect(getPokemons("0-9")[0].name).toEqual('Bulbasaur');
   });
 
-  test('return array ordered by name', () => {
-    let result = arrayOrderedByName('z-a')
-    expect(result[0].name).toBe('Zubat');
-  });
-});
-
-// test arrayOrderedByNum
-describe('arrayOrderedByNumber', () => {
-  test('is a function', () => {
-    expect(typeof arrayOrderedByNumber).toBe('function');
+  test('Deberia retornar los pokemones ordenados del 9 al 0', () => {
+    expect(getPokemons("9-0")[0].name).toEqual('Mew');
   });
 
-  test('return array ordered by num', () => {
-    let result = arrayOrderedByNumber('descendente')
-    expect(result[0].num).toBe('151');
+  test('Deberia retornar los pokemones ordenados de la A al Z', () => {
+    expect(getPokemons("AZ")[0].name).toEqual('Abra');
   });
+
+  test('Deberia retornar los pokemones ordenados de la Z al A', () => {
+    expect(getPokemons("ZA")[0].name).toEqual('Zubat');
+  });
+
+  test('Testea filtro de tipos agua', () => {
+    expect(getPokemons("0-9", "Water")[0].name).toEqual('Squirtle');
+  });
+
+  test('Testea filtro de debilidad con ejemplo agua', () => {
+    expect(getPokemons("0-9", "", "Water")[0].name).toEqual('Charmander');
+  });
+
+  test('Testea filtro de tipo y debilidad con ejemplo agua y tierra', () => {
+    expect(getPokemons("0-9", "Ground", "Water")[0].name).toEqual('Sandshrew');
+  });
+
 });
 
 // Example test

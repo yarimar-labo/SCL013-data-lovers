@@ -1,42 +1,62 @@
 import data from './data/pokemon/pokemon.js';
 
-// Devuelve un array ordenado numerica o alfabeticamente al compararlo con su condition seleccionada.
-export const sortedData = (condition) => {
+//Se extrae el array de pokemon
+export const pokemons = data.pokemon;
 
-  if (condition === "ascendente" || condition === "descendente") {
-    return arrayOrderedByNumber(condition);
+//Se crea la funcion getTipos y se deja el array vacio para que muestre todos los pokemones.
+export const getTypes = () => {
+  let types = []; //se programara para el futuro.
+
+  return types;
+
+}
+//Se crea la funcion getdebilidades y se deja el array vacio para que las muestre todas.
+export const getWeakness = () => {
+  let weakness = []; //se programara para el futuro.
+
+  return weakness;
+
+}
+//Con esta funcion filtramos y ordenamos por numero, tipo y debilidad, y se duplica para no alterar la data original
+export const getPokemons = (order = '0-9', typePokemon = '', weaknessPokemon = '') => {
+  let filterType = [typePokemon];
+  let filterWeakness = [weaknessPokemon];
+  //Devuelve una copia del array.
+  let listPokemons = [...pokemons];
+
+  //Si el tipo de pokemon es diferente a '' se aplica el filtro, si es igual a '' no se aplica ningun filtro sobre el tipo.
+  if (typePokemon != '') {
+    //Filtra el array de los pokemones utilizando filter para todos aquellos que contengan al menos 1 coincidencia del tipo pasado.
+    listPokemons = listPokemons.filter(pokemon => pokemon.type.some(typePokemon => filterType.includes(typePokemon)));
   }
-  else if (condition === "a-z" || condition === "z-a") {
-    return arrayOrderedByName(condition);
+
+  if (weaknessPokemon != '') {
+    listPokemons = listPokemons.filter(pokemon => pokemon.weaknesses.some(wkPokemon => filterWeakness.includes(wkPokemon)));
   }
+
+  //Se utiliza para evaluar diferentes casos de una variable que serian ordenar de (AZ O numero ascendente y desentente).
+  switch (order) {
+    case "ZA":
+      //Devuelve el array ordenado alfabeticamente o dependiendo la opcion elegida.
+      listPokemons.sort((pokemon1, pokemon2) => {
+      //devuelve un resultado a trevez de operador ternario.
+        return pokemon1.name < pokemon2.name ? 1 : -1;
+      });
+      break;
+    case "0-9":
+      listPokemons.sort((pokemon1, pokemon2) => {
+        return pokemon1.num > pokemon2.num ? 1 : -1;
+      });
+      break;
+    case "9-0":
+      listPokemons.sort((pokemon1, pokemon2) => {
+        return pokemon1.num < pokemon2.num ? 1 : -1;
+      });
+      break;
+    default:
+      listPokemons.sort((pokemon1, pokemon2) => {
+        return pokemon1.name > pokemon2.name ? 1 : -1;
+      });
+  }
+  return listPokemons;
 }
-
-// Devuelve un array ordenado alfabeticamente
-export const arrayOrderedByName = (condition) => {
-  let sortedArray = data.pokemon.sort(function (a, b) {
-
-    if (condition === "a-z") {
-      // Devuelve un resultado a traves de operador ternario
-      return (a.name > b.name) ? 1 : -1
-    }
-    else if (condition === "z-a") {
-      return (b.name > a.name) ? 1 : -1
-    }
-  });
-  return sortedArray;
-}
-
-// Devuelve un array ordenado numericamente
-export const arrayOrderedByNumber = (condition) => {
-  let sortedArray = data.pokemon.sort(function (p1, p2) {
-
-    if (condition === "ascendente") {
-      return (p1.id - p2.id);
-    }
-    else if (condition === "descendente") {
-      return (p2.id - p1.id);
-    }
-  });
-  return sortedArray;
-}
-
