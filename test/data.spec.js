@@ -25,7 +25,7 @@ describe('getPokemons', () => {
   test('Testea filtro de tipos agua', () => {
     expect(getPokemons("0-9", "Water")[0].name).toEqual('Squirtle');
   });
-  
+
   test('Testea filtro de debilidad con ejemplo agua', () => {
     expect(getPokemons("0-9", "", "Water")[0].name).toEqual('Charmander');
   });
@@ -35,3 +35,14 @@ describe('getPokemons', () => {
   });
 
 });
+
+// Example test
+// describe('anotherExample', () => {
+//   test('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
+
+//   test('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });

@@ -85,7 +85,7 @@ window.onload = () => {
     });
 
     //Se rellena los pokemones segun los filtros por defecto.
-    displayPokemon(); 
+    displayPokemon();
     //Se rellenan los tipos.
     displayTypes();
     //Se rellenan las debilidades.
