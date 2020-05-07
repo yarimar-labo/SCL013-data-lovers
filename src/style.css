@@ -18,7 +18,8 @@ header {
     height: 240px;
     z-index: 10000;
     background-color: #c4c4c4;
-    box-shadow: -2px 3px 9px #424242}
+    box-shadow: -2px 3px 9px #424242
+}
 
 .header {
     width: 100%;
@@ -27,9 +28,10 @@ header {
     align-items: center;
     padding: 10px;
 }
+
 .logo {
-   margin-right: auto;
-   margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .navegationBar {
@@ -61,7 +63,7 @@ a {
     color: white;
 }
 
-.icon #search-box > div input#search{
+.icon #search-box>div input#search {
     color: #585151;
     font-size: 20px;
 }
@@ -72,9 +74,14 @@ a {
     color: white;
 }
 
+label {
+    color: white;
+}
+
 a.navegationMenu {
     margin-top: 4px;
 }
+
 select:focus {
     outline: none;
 }
@@ -95,14 +102,14 @@ select:focus {
     margin-top: 17px;
 }
 
-#search-box > div {
+#search-box>div {
     width: 300px;
     vertical-align: middle;
     white-space: nowrap;
     position: relative;
 }
 
-#search-box > div input#search {
+#search-box>div input#search {
     width: 300px;
     height: 50px;
     background: white;
@@ -115,61 +122,69 @@ select:focus {
     -moz-border-radius: 50px;
     border-radius: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
-#search-box > div input#search:focus {
+#search-box>div input#search:focus {
     outline: none;
 }
 
-#search-box > div input#search::-webkit-input-placeholder {
+#search-box>div input#search::-webkit-input-placeholder {
     color: #818181;
 }
 
-#search-box > div input#search:-moz-placeholder {
+#search-box>div input#search:-moz-placeholder {
     /* Firefox 18- */
     color: #818181;
 }
 
-#search-box > div input#search::-moz-placeholder {
+#search-box>div input#search::-moz-placeholder {
     /* Firefox 19+ */
-    color:#818181;
-}
-
-#search-box > div input#search:-ms-input-placeholder {
     color: #818181;
 }
 
-#search-box > div .icon {
+#search-box>div input#search:-ms-input-placeholder {
+    color: #818181;
+}
+
+#search-box>div .icon {
     position: relative;
     z-index: 1;
-    color:#818181;
+    color: #818181;
     left: 40px;
-  }
-  .containerCard {
+}
+
+.containerCard {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
     margin-left: 10%;
     margin-right: 10%;
     justify-content: center;
-  }
+}
 
- .pokemonCard {
+.containerCard a {
+    color: black;
+}
+
+.pokemonCard {
     flex-direction: column;
-    background-color: white;
     margin: 1%;
     padding: 3%;
     border-radius: 5%;
+    border:2px solid rgb(243, 31, 31);
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.5s ease-out;
     width: 150px;
- }
- .pokemonCard:hover {
-     box-shadow: 0 4px 8px 0 rgba(246, 50, 109, 0.2), 0 6px 20px 0 rgba(246, 50, 73, 0.2);
- }
- 
- .pokemonImg { 
+    background: rgb(249, 249, 249);
+    background: linear-gradient(156deg, rgba(249, 249, 249, 1) 2%, rgba(241, 241, 245, 1) 31%, rgba(211, 211, 215, 1) 46%, rgba(173, 174, 176, 1) 67%, rgba(194, 194, 194, 1) 100%);
+}
+
+.pokemonCard:hover {
+    box-shadow: 0 4px 8px 0 rgba(50, 96, 246, 0.2), 0 6px 20px 0 rgba(50, 96, 246, 0.2);
+}
+
+.pokemonImg {
     width: 100%;
 }
 
@@ -177,6 +192,7 @@ select:focus {
     margin-top: 10%;
     width: 120px;
 }
+
 .pokemonNum {
     width: 120px;
     margin-bottom: 20%;
@@ -197,6 +213,5 @@ footer {
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
-    text-align: center;    
+    text-align: center;
 }
-
