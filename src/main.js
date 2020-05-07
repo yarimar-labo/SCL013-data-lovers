@@ -67,7 +67,7 @@ printPokemonCard(data.pokemon)
 // SEARCH
 const search = document.getElementById("search");
 
-
+search.addEventListener()
 // TO DO
 
 //
