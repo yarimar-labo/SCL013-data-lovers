@@ -30,7 +30,7 @@ const printPokemonCard = (datapokemon) => {
 const clearCardContainer = () => {
   let visiblePokemonCards = document.getElementById("containerCard").querySelectorAll(".pokemonCard");
 
-  visiblePokemonCards.forEach(function (pokemonCard) {
+  visiblePokemonCards.forEach(function (pokemonCard){
     pokemonCard.remove();
   })
 }
@@ -62,3 +62,12 @@ const showPokemonCard = (pokemonCard) => {
 
 // Imprimo todos los pokemon al inicializar la pagina.
 printPokemonCard(data.pokemon)
+
+
+// SEARCH
+const search = document.getElementById("search");
+
+
+// TO DO
+
+//
