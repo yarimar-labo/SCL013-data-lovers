@@ -3,20 +3,6 @@ import data from './data/pokemon/pokemon.js';
 //Se extrae el array de pokemon
 export const pokemons = data.pokemon;
 
-//Se crea la funcion getTipos y se deja el array vacio para que muestre todos los pokemones.
-export const getTypes = () => {
-  let types = []; //se programara para el futuro.
-
-  return types;
-
-}
-//Se crea la funcion getdebilidades y se deja el array vacio para que las muestre todas.
-export const getWeakness = () => {
-  let weakness = []; //se programara para el futuro.
-
-  return weakness;
-
-}
 //Con esta funcion filtramos y ordenamos por numero, tipo y debilidad, y se duplica para no alterar la data original
 export const getPokemons = (order = '0-9', typePokemon = '', weaknessPokemon = '') => {
   let filterType = [typePokemon];
