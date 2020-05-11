@@ -11,19 +11,22 @@ maximum-scale=1">
   <script src="https://kit.fontawesome.com/24e71e8c99.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="Body">
   <header>
     <div class="header">
       <img class="logo" src="./imagenes/logotipo.png" alt="logotipo">
       <div id="menuBtn" style="display: none;">
         <label for="toggle">&#9776</label>
-         <input type="checkbox" id="toggle"/>
-       </div>
+        <input type="checkbox" id="toggle" />
+      </div>
     </div>
+
     <nav class="flex-menu navegationBar">
+
       <div class="flex-element">
         <a href="#"><span class="homeBtn"><i class="fas fa-home" id="homeBtn"></i></span></a>
       </div>
+
       <div class="flex-element">
         <label for="order">Orden: </label>
         <div class="filterOption">
@@ -36,8 +39,8 @@ maximum-scale=1">
           </select>
         </div>
       </div>
-      <div class="flex-element">
 
+      <div class="flex-element">
         <div class="filterOption">
           <label for="types">Tipo: </label>
           <select class="navegationMenu" id="types">
@@ -65,7 +68,6 @@ maximum-scale=1">
       </div>
 
       <div class="flex-element">
-
         <div class="filterOption">
           <label for="weakness">Debilidades: </label>
           <select class="navegationMenu" id="weakness">
@@ -91,22 +93,25 @@ maximum-scale=1">
           </select>
         </div>
       </div>
+
       <div class="flex-element">
         <div class="filterOption">
-        <a href="https://pokemon.fandom.com/es/wiki/Lista_de_Pok%C3%A9mon" class="navegationMenu">Más información</a>
+          <a href="https://pokemon.fandom.com/es/wiki/Lista_de_Pok%C3%A9mon" class="navegationMenu">Más información</a>
+        </div>
       </div>
-      </div>
+
       <div id="search-box">
         <div>
           <span class="icon"><i class="fas fa-search"></i></span>
           <input type="search" id="search" placeholder="Buscar pokémon" />
         </div>
       </div>
-    </nav>
 
+    </nav>
   </header>
 
   <main class="containerMain" id="root">
+
     <div id="informationMain" style="display: none;" class="informationMain">
       <div>
         <p class="welcomeParagraph">Encuentra todo lo que necesitas saber acerca de los pokémon de Kanto<br>
@@ -116,9 +121,11 @@ maximum-scale=1">
       <div><img class="pokedex" src="./imagenes/imagen-de-inicio.png" alt="pokedex">
       </div>
     </div>
+
     <div class="containerCard" id="containerCard">
       <!-- Pokemon card -->
     </div>
+
   </main>
 
   <footer>@Copyright 2020 by Nadia Gincoff & Yarimar Diaz</footer>
