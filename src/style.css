@@ -1,182 +1,353 @@
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-  background-color: white;
+    background-color: white;
 }
+
 header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 240px;
-  z-index: 10000;
-  background-color: #c4c4c4;
-  box-shadow: -2px 3px 9px #424242}
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 240px;
+    z-index: 10000;
+    background-color: #c4c4c4;
+    box-shadow: -2px 3px 9px #424242
+}
+
 .header {
-  width: 100%;
-  background-color: #DC0A2D;
-  display: flex;
-  align-items: center;
-  padding: 10px;
+    width: 100%;
+    background-color: #DC0A2D;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
+
 .logo {
- margin-right: auto;
- margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 .navegationBar {
-  background-color: #424242;
-  padding: 3px;
+    background-color: #424242;
+    padding: 3px;
 }
+
 .flex-menu {
-  border: 1px solid #555;
-  font: 14px Arial;
-  display: -webkit-flex;
-  -webkit-flex-direction: row;
-  display: flex;
-  flex-direction: row;
+    border: 1px solid #555;
+    font: 14px Arial;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
+
 .flex-element {
-  width: auto;
-  -webkit-transition: width 0.7s ease-out;
-  transition: width 0.7s ease-out;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  text-align: center;
-  margin-top: 4px;
+    width: auto;
+    -webkit-transition: width 0.7s ease-out;
+    transition: width 0.7s ease-out;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    margin-top: 4px;
 }
+
 a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
-.icon #search-box > div input#search{
-  color: #585151;
-  font-size: 20px;
+
+.icon #search-box>div input#search {
+    color: #585151;
+    font-size: 20px;
 }
+
 .navegationMenu {
-  background-color: #424242;
-  border: none;
-  color: white;
+    background-color: #424242;
+    border: none;
+    color: white;
 }
+
 label {
-color: white;
+    color: white;
 }
+
 a.navegationMenu {
-  margin-top: 4px;
+    margin-top: 4px;
 }
+
 select:focus {
-  outline: none;
+    outline: none;
 }
+
 .containerMain {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  background-color: white;
-  margin-top: 240px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    background-color: white;
+    margin-top: 240px;
 }
+
 #search-box {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 320px;
-  margin-top: 17px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    margin-top: 17px;
 }
-#search-box > div {
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
+
+#search-box>div {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
 }
-#search-box > div input#search {
-  width: 300px;
-  height: 50px;
-  background: white;
-  border: #818181;
-  border-radius: 50px;
-  font-size: 10px;
-  color: #585151;
-  padding-left: 45px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+#search-box>div input#search {
+    width: 300px;
+    height: 50px;
+    background: white;
+    border: #818181;
+    border-radius: 50px;
+    font-size: 10px;
+    color: #585151;
+    padding-left: 45px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#search-box > div input#search:focus {
-  outline: none;
+
+#search-box>div input#search:focus {
+    outline: none;
 }
-#search-box > div input#search::-webkit-input-placeholder {
-  color: #818181;
+
+#search-box>div input#search::-webkit-input-placeholder {
+    color: #818181;
 }
-#search-box > div input#search:-moz-placeholder {
-  /* Firefox 18- */
-  color: #818181;
+
+#search-box>div input#search:-moz-placeholder {
+    /* Firefox 18- */
+    color: #818181;
 }
-#search-box > div input#search::-moz-placeholder {
-  /* Firefox 19+ */
-  color:#818181;
+
+#search-box>div input#search::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #818181;
 }
-#search-box > div input#search:-ms-input-placeholder {
-  color: #818181;
+
+#search-box>div input#search:-ms-input-placeholder {
+    color: #818181;
 }
-#search-box > div .icon {
-  position: relative;
-  z-index: 1;
-  color:#818181;
-  left: 40px;
+
+#search-box>div .icon {
+    position: relative;
+    z-index: 1;
+    color: #818181;
+    left: 40px;
 }
+
 .containerCard {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  margin-left: 10%;
-  margin-right: 10%;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
 }
-.containerCard a{
+
+.containerCard a {
     color: black;
 }
+
 .pokemonCard {
-  flex-direction: column;
-  background-color: white;
-  margin: 1%;
-  padding: 3%;
-  border-radius: 5%;
-  cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.5s ease-out;
-  width: 150px;
+    flex-direction: column;
+    margin: 1%;
+    padding: 3%;
+    border-radius: 5%;
+    border: 2px solid rgb(243, 31, 31);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease-out;
+    width: 150px;
+    background: rgb(249, 249, 249);
+    background: linear-gradient(156deg, rgba(249, 249, 249, 1) 2%, rgba(241, 241, 245, 1) 31%, rgba(211, 211, 215, 1) 46%, rgba(173, 174, 176, 1) 67%, rgba(194, 194, 194, 1) 100%);
 }
+
 .pokemonCard:hover {
-   box-shadow: 0 4px 8px 0 rgba(50, 96, 246, 0.2), 0 6px 20px 0 rgba(50, 96, 246, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(50, 96, 246, 0.2), 0 6px 20px 0 rgba(50, 96, 246, 0.2);
 }
+
 .pokemonImg {
-  width: 100%;
+    width: 100%;
 }
+
 .pokemonName {
-  margin-top: 10%;
-  width: 120px;
+    margin-top: 10%;
+    width: 120px;
 }
+
 .pokemonNum {
-  width: 120px;
-  margin-bottom: 20%;
-  color: #818181;
+    width: 120px;
+    margin-bottom: 20%;
+    color: #818181;
 }
+
 #contents {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #424242;
-  color: white;
-  font-size: 11px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 5px;
-  text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #424242;
+    color: white;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    text-align: center;
 }
+
+#dark {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10001;
+}
+
+#win {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    margin-left: -250px;
+    margin-top: -200px;
+}
+
+#win label {
+    color: black;
+    font-size: 18px;
+}
+
+.imgModal {
+    display: block;
+    float: left;
+}
+
+.typeModal margenes {
+    margin-bottom: 10px;
+}
+
+
+#button {
+    color: darkred;
+    float: right;
+    margin: 10px;
+    border: none;
+    font-size: 25px;
+}
+
+#button:hover {
+    color: red;
+}
+
+.char {
+    padding: 2px 4px;
+    border-radius: 5px;
+    margin: 0 4px;
+    border-style: inset;
+}
+
+.name {
+    font-size: 40px;
+}
+/*Estilo de los tipos y debilidades*/
+._normal {
+    background-color: #a8a878
+}
+
+._fire {
+    background-color: #f08030
+}
+
+._water {
+    background-color: #6890f0
+}
+
+._grass {
+    background-color: #78c850
+}
+
+._poison {
+    background-color: #a040a0
+}
+
+._electric {
+    background-color: #f8d030
+}
+
+._ground {
+    background-color: #e0c068
+}
+
+._psychic {
+    background-color: #f85888
+}
+
+._rock {
+    background-color: #b8a038
+}
+
+._ice {
+    background-color: #98d8d8
+}
+
+._bug {
+    background-color: #a8b820
+}
+
+._dragon {
+    background-color: #7038f8
+}
+
+._ghost {
+    background-color: #705898
+}
+
+._steel {
+    background-color: #b8b8d0
+}
+
+._fairy {
+    background-color: #ee99ac
+}
+
+._flying {
+    background-color: #98A8F0;
+}
+
+._fighting {
+    background-color: #A05038;
+}
+
+._dark {
+    background-color: #424242;
+}
+
