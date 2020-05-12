@@ -8,6 +8,7 @@ maximum-scale=1">
   <title>Pokedata</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto:400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/24e71e8c99.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,20 +16,20 @@ maximum-scale=1">
   <header>
     <div class="header">
       <img class="logo" src="./imagenes/logotipo.png" alt="logotipo">
-      <div id="menuBtn" style="display: none;">
-        <label for="toggle">&#9776</label>
-        <input type="checkbox" id="toggle" />
-      </div>
+      <div>
+        <a href="javascript:void(0);" class="icon-display-menu" id="icon-display-menu">
+        <i class="fa fa-bars"></i>
+      </a></div>
     </div>
 
     <nav class="flex-menu navegationBar">
 
-      <div class="flex-element">
+      <div class="flex-element" id="flex-element1">
         <a href="#"><span class="homeBtn"><i class="fas fa-home" id="homeBtn"></i></span></a>
       </div>
 
-      <div class="flex-element">
-        <label for="order">Orden: </label>
+      <div class="flex-element" id="flex-element2">
+        <!-- <label for="order">Orden: </label> -->
         <div class="filterOption">
           <select class="navegationMenu" id="order">
             <option value="ordered">Ordenar</option>
@@ -40,11 +41,11 @@ maximum-scale=1">
         </div>
       </div>
 
-      <div class="flex-element">
+      <div class="flex-element" id="flex-element3">
         <div class="filterOption">
-          <label for="types">Tipo: </label>
+          <!-- <label for="types">Tipo: </label> -->
           <select class="navegationMenu" id="types">
-            <option value="">Todos</option>
+            <option value="">Tipo de pokemon</option>
             <option value="Water">Agua</option>
             <option value="Fire">Fuego</option>
             <option value="Ground">Tierra</option>
@@ -67,9 +68,9 @@ maximum-scale=1">
         </div>
       </div>
 
-      <div class="flex-element">
+      <div class="flex-element" id="flex-element4">
         <div class="filterOption">
-          <label for="weakness">Debilidades: </label>
+          <!-- <label for="weakness">Debilidades: </label> -->
           <select class="navegationMenu" id="weakness">
             <option value="">Debilidad pokémon</option>
             <option value="Water">Agua</option>
@@ -94,13 +95,13 @@ maximum-scale=1">
         </div>
       </div>
 
-      <div class="flex-element">
+      <div class="flex-element" id="flex-element5">
         <div class="filterOption">
           <a href="https://pokemon.fandom.com/es/wiki/Lista_de_Pok%C3%A9mon" class="navegationMenu">Más información</a>
         </div>
       </div>
 
-      <div id="search-box">
+      <div id="search-box" class="">
         <div>
           <span class="icon"><i class="fas fa-search"></i></span>
           <input type="search" id="search" placeholder="Buscar pokémon" />
@@ -112,21 +113,23 @@ maximum-scale=1">
 
   <main class="containerMain" id="root">
 
-    <div id="informationMain" style="display: none;" class="informationMain">
-      <div>
-        <p class="welcomeParagraph">Encuentra todo lo que necesitas saber acerca de los pokémon de Kanto<br>
-          filtralos por su tipo, debilidad y conoce sus caracteristicas principales<br>
-          Prepárate para las batallas!</p>
-      </div>
-      <div><img class="pokedex" src="./imagenes/imagen-de-inicio.png" alt="pokedex">
-      </div>
-    </div>
-
     <div class="containerCard" id="containerCard">
       <!-- Pokemon card -->
     </div>
 
   </main>
+
+
+  <!-- INFORMATION MENU -->
+  <!-- <div id="informationMain" style="display: none;" class="informationMain">
+    <div>
+      <p class="welcomeParagraph">Encuentra todo lo que necesitas saber acerca de los pokémon de Kanto<br>
+        filtralos por su tipo, debilidad y conoce sus caracteristicas principales<br>
+        Prepárate para las batallas!</p>
+    </div>
+    <div><img class="pokedex" src="./imagenes/imagen-de-inicio.png" alt="pokedex">
+    </div>
+  </div> -->
 
   <footer>@Copyright 2020 by Nadia Gincoff & Yarimar Diaz</footer>
   <script src="main.js" type="module"></script>
