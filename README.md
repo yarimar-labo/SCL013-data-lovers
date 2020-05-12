@@ -38,6 +38,7 @@ Para eso, ingreso a la página y los ordeno alfabéticamente o numéricamente."_
 * [x] Debe tener una interfaz que siga los fundamentos de visual design.
 
 ###### Definición de terminado.
+
 * [x] El usuario puede ordenar las tarjetas pokemon seleccionando una opción (A-Z, Z-A, Ascendente, Descendente) en un menú desplegable.
 
 ##### Historia de usuario 2
@@ -53,17 +54,58 @@ Para obtener todos los pokémon de dicho tipo."_
 * [] La página y sus opciones se pueden ver fácilmente desde cualquier dispositivo.
 
 ###### Definición de terminado.
+
 * [x] El usuario puede observar los pokemon de tipo fuego con su nombre y su numeración.
 * [x] El código cumple con la guía de estilos acordada.
 * [x] El código esta en el repositorio.
 * [x] El código tiene y pasa los test necesarios y se ha hecho en Visual Studio Code.
 * [x] Esta historia ha sido testeada con 2 personas y se han incorporado las mejoras indicadas para su usabilidad.
 
-#### Prototipo de baja fidelidad
+##### Historia de usuario 3
+
+_"Yo como entrenador pokémon
+Quiero ver las debilidades que tiene cada pokémon a la hora del combate 
+Para tener cierta ventaja en el juego.
+
+###### Criterio de aceptación
+
+* [x] El usuario al entrar a la pagina y tener todos los pokémones en pantalla, puede filtrar por debilidad haciendo uso del menú desplegable.
+* [x] Puede seleccionar la opción que desea.
+* [] La página y sus opciones se ver fácilmente desde cualquier dispositivo.
+
+###### Definición de terminado.
+
+* [x] El usuario puede observar los pokemon por la debelidad que eligió con su nombre y su numeración.
+* [x] El código cumple con la guía de estilos acordada.
+* [x] El código esta en el repositorio.
+* [x] El código tiene y pasa los test necesarios y se ha hecho en Visual Studio Code.
+* [x] Esta historia ha sido testeada con 2 personas y se han incorporado las mejoras indicadas para su usabilidad.
+
+##### Historia de usuario 4
+
+_*Yo como entrenador pokémon 
+Quiero ver una ficha con las características principales del pokémon que elija.
+Para conocer más sobre ellos.
+
+###### Criterio de aceptación
+
+*[x] El usuario al entrar a la página y tener todos los pokémones en pantalla
+*[x] Puede hacer _click_ sobre cualquier pokémon
+*[x] Saldrá un _Modal_ con las características del pokémon
+*[x] Podrá ver detalles de las características del pokémon como _peso, altura, caramelos_ además de su tipo y debilidad por color.
+
+###### Definición de terminado.
+
+* [x] El usuario puede observar el tipo por color al entrar a la tarjeta del pokémon.
+* [x] El código cumple con la guía de estilos acordada.
+* [x] El código esta en el repositorio.
+
+
 
 ###### Sketch
 
-_inserte prototipo de baja fidelidad hecho en lapiz y papel_
+ #### Prototipo de baja fidelidad
+[Click para ver prototipo de baja fidelidad hecho en papel y lápiz](https://www.dropbox.com/s/a3ze7x8usgd0q4y/prototipo%20a%20lapiz.jpeg?dl=0)
 
 ###### Prototipo en inVision
 [Click para ver prototipo en inVision](https://yarimardiaz369160.invisionapp.com/freehand/Pokemon-LFeeCtDqm?v=bIOUa7Vk7%2BwWWSoZuzzlBg%3D%3D&linkshare=urlcopied)
@@ -92,7 +134,7 @@ Al recibir feedback nos hicieron saber que no quedaba claro qué tipo de pokemon
 
 ## 5. Checklist
 
-* [ ] Usa VanillaJS.
+* [x] Usa VanillaJS.
 * [x] No hace uso de `this`.
 * [x] Pasa linter (`npm run pretest`)
 * [x] Pasa tests (`npm test`)
@@ -100,9 +142,9 @@ Al recibir feedback nos hicieron saber que no quedaba claro qué tipo de pokemon
   lines y branches.
 * [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [x] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
 * [ ] Incluye link a Zeplin en `README.md`.
 * [ ] Incluye el listado de problemas que detectaste a través de tests de
