@@ -122,8 +122,8 @@ Al recibir el feedback nos dijo que estaba bonito y bien encaminado, pero le fal
 
 
 #### Prototipo de alta fidelidad
+[Click para ver prototipo de alta fidelidad en Figma](https://www.figma.com/file/1ijfbnP2kA6o0wpcN2JYCe/Untitled?node-id=0%3A1)
 
-_inserte prototipo de alta fidelidad_
 
 * Testeo con Cristian del segundo prototipo de alta fidelidad:
 Al recibir feedback nos hicieron saber que no quedaba claro qué tipo de pokemon estaban viendo, ya que en ningún lado de la página se mostraba el filtro que se había seleccionado.
