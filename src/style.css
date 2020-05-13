@@ -43,10 +43,8 @@ header {
     margin-left: auto;
 }
 label {
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
-  display: none;
+  margin: 0 5px 0 0;
+  color: white;
 }
 #toggle {
   display: none;
@@ -57,8 +55,6 @@ label {
   background-color: #424242;
   border: none;
   color: white;
-  margin-top: 1.5%;
-  margin-bottom: 0.5%;
   font-size: 16px;
 }
 
@@ -85,8 +81,16 @@ select:focus {
 .flex-element {
   width: 80%;
   text-align: center;
-  display: block;
-  padding: 15px 20px;
+  display: flex;
+  padding: 15px 10px;
+  margin-top: 7px;
+
+}
+
+.flex-element label {
+  margin-top: 5px;
+  background-color: red;
+  padding-top: 5px;
 }
 .flex-element:hover{
   background: rgba(0, 0, 0, 0.3);
@@ -151,6 +155,7 @@ select:focus {
   left: 0px;
   background-color: white;
   margin-top: 13%;
+  margin-top: 227px;
 }
 .informationMain {
   background-color: red;
@@ -191,7 +196,6 @@ select:focus {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.575);
   transition: all 0.5s ease-out;
   width: 200px;
-  margin-top: 120px;
 }
 .pokemonCard:hover {
    box-shadow: 0 4px 8px 0 rgba(253, 22, 22, 0.521), 0 6px 20px 0 rgba(247, 60, 60, 0.568);
@@ -293,23 +297,44 @@ footer {
     box-shadow: 3px 3px 3px black;
     margin-left: -250px;
     margin-top: -200px;
+    animation-name: modal;
+    animation-duration: 1s;
 }
+
+@keyframes win{
+  from{top: -800px; opacity: 0;}
+  to{top:50; opacity:1}
+}
+
 
 #win label {
     color: black;
     font-size: 18px;
+    display: block;
+    margin-top: 2px;
+    font-weight: bold;
 }
 
 .imgModal {
     display: block;
     float: left;
+    margin-right: 40px;
+    margin-left: 30px;
 }
 
-.typeModal margenes {
-    margin-bottom: 10px;
+.margenes {
+margin-top: 5px;
+margin-left: 63px;
 }
 
+.margenes p label, .margenes p span {
+  display: table-cell!important;
+}
 
+.margenes .inline-types {
+  display: flex;
+  flex-wrap: wrap;
+}
 #button {
     color: darkred;
     float: right;
@@ -327,10 +352,13 @@ footer {
     border-radius: 5px;
     margin: 0 4px;
     border-style: inset;
+    display: table-cell;
 }
 
 .name {
     font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
 }
 /*Estilo de los tipos y debilidades*/
 ._normal {
